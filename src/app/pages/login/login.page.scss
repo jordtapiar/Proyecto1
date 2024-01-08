@@ -1,0 +1,70 @@
+.conteiner{
+    width: 400px;
+    height: 400;
+    background: ffff;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.duoc{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    animation: duoc 10s infinite;
+}
+
+.card{
+    width: 200px;
+    margin: 25px auto;
+    display: block; 
+    animation: card 2s;
+
+}
+
+.contra{
+    width: 250px;
+    margin: 25px auto;
+    display: block; 
+    animation:contra 2s;
+
+}
+
+
+
+
+@keyframes duoc{
+    0%{
+        transform: translateY(-50px);
+    }
+    30%{
+        transform: translateY(0) rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes contra{
+    30%{
+        transform: translateY(0) rotate(2deg);
+    }
+    0%{
+        transform: translateY(-50px);
+    }
+
+}
+
+@keyframes card{
+    30%{
+        transform: translateY(0) rotate(2deg);
+    }
+    0%{
+        transform: translateY(-50px);
+    }
+}

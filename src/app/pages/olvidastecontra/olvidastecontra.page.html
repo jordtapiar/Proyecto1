@@ -1,0 +1,28 @@
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title"> 
+      Coloque su Usuario
+      <p class="subTitle">para recibir un enlace para restablecer una contraseña</p>
+    </ion-title>
+  </div>
+  <div>
+    <ion-item>
+      <ion-input class="input" placeholder="Coloque su usuario" name="person-outline"></ion-input>
+      <ion-input class="input" placeholder="Coloque su Correo"></ion-input>
+    </ion-item>
+    <ion-button class="card"color="dark" routerLink="/login" id="present-alert" >Recuperar</ion-button>
+    <ion-alert
+  trigger="present-alert"
+  header="Restablecer contraseña"
+  subHeader="Se envio codigo "
+  message="Verifique su correo"
+  [buttons]="alertButtons"
+></ion-alert>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+      <ion-fab-button [routerLink]="['/login']">
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-content> 

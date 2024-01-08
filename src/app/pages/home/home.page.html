@@ -1,0 +1,45 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header no-border>
+    <ion-toolbar>
+      <ion-img></ion-img>
+      <ion-title>Opciones</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button color="dark" expand="block">Perfil</ion-button>
+    <ion-button color="dark" expand="block">Clases</ion-button>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header color="light" no-border>
+    <ion-toolbar color="light">
+      <ion-title>Menú</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content  color="light" class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bienvenido a RegistrAPP</ion-card-title>
+        <ion-card-subtitle>{{data.usuario}},</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        En esta aplicacion, podras ver tus asignaturas, horarios y registrar asistencia.  
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img class="" alt="Silhouette of mountains" src="assets/images/caballero.jpg" />
+      <ion-card-header>
+        <ion-card-title class="card">-Registrar asistencia-</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-button class="card"color="dark"id="open-loading">Haz click aqui</ion-button>
+        <ion-loading trigger="open-loading" message="Un momento porfavor..." duration="1000"></ion-loading>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</div>
