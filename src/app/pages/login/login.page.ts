@@ -33,7 +33,7 @@ export class LoginPage  {
       }
       this.router.navigate(['/home'],navigationextras);
     }else{
-      this.presentToast('middle','Falta: '+this.field, 5000)
+      this.presentToast('middle','Falta: '+this.field, 1000)
     }
   }
   /**
