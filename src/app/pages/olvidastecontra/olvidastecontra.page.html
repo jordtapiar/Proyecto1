@@ -1,4 +1,10 @@
 
+<ion-header [translucent]="true" no-border >
+  <ion-toolbar color="dark" >
+    <ion-title class="title">Recuperacion de Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <div class="header">
     <ion-title class="title"> 
@@ -19,8 +25,8 @@
   message="Verifique su correo"
   [buttons]="alertButtons"
 ></ion-alert>
-    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
-      <ion-fab-button [routerLink]="['/login']">
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 40px;"  >
+      <ion-fab-button [routerLink]="['/login']" color="dark">
       <ion-icon name="home"></ion-icon>
     </ion-fab-button>
     </ion-fab>
