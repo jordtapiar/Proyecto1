@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: '**',
+    loadChildren: () => import('./pages/page404/page404.module').then( m => m.Page404PageModule)
+  },
+  {
     path: 'olvidastecontra',
     loadChildren: () => import('./pages/olvidastecontra/olvidastecontra.module').then( m => m.OlvidastecontraPageModule)
   },

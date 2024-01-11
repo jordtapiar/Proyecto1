@@ -26,6 +26,7 @@ datos:any={
 };
   constructor(private activatedRoute: ActivatedRoute,
     private router:Router,public alertController: AlertController) {
+      
       // Se llama a la ruta activa y se obtiene sus parametros mediante una suscripción
       this.activatedRoute.queryParams.subscribe(params =>{//utilizo lambda
         if (this.router.getCurrentNavigation()?.extras.state) {
@@ -34,7 +35,10 @@ datos:any={
         }else{
           this.router.navigate(["/login"]);
         }
+
+        
       });
+      
     }
   /**
      * Metodo limpíar recorre un objeto y se define el 
@@ -63,4 +67,5 @@ datos:any={
     });
     await alert.present();
   }
+  
 }
