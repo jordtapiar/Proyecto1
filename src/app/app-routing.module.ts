@@ -20,9 +20,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/olvidastecontra/olvidastecontra.module').then( m => m.OlvidastecontraPageModule)
   },
   {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/page404/page404.module').then( m => m.Page404PageModule)
   },
+  
+
 ];
 
 @NgModule({
