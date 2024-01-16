@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PerfilPage } from './perfil.page';
-import { Componente1Component } from 'src/app/components/componente1/componente1.component';
-import { Componente2Component } from 'src/app/components/componente2/componente2.component';
+import { Componente1Component } from 'src/app/components/edicionPerfil/componente1.component';
+import { Componente2Component } from 'src/app/components/horario/componente2.component';
 
 const routes: Routes = [
   {
