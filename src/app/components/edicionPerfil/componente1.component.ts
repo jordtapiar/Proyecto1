@@ -28,7 +28,7 @@ export class Componente1Component   {
           Object.defineProperty(this.dato,key,{value:""})
         }
   }
-  mostrar(){
+  guardar(){
     if (this.dato.nombre!="" && this.dato.apellido!="") {
       this.presentAlert("EDITADO CON EXITO","Su nombre es "+this.dato.nombre+" "+this.dato.apellido)
     } else {
