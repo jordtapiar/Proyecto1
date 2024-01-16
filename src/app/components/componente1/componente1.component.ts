@@ -32,7 +32,7 @@ export class Componente1Component   {
     if (this.dato.nombre!="" && this.dato.apellido!="") {
       this.presentAlert("EDITADO CON EXITO","Su nombre es "+this.dato.nombre+" "+this.dato.apellido)
     } else {
-      this.presentAlert("INGRESE DATOS SOLICITADOS","")
+      this.presentAlert("NADA SE HA MODIFICADO","")
     }
   }
 

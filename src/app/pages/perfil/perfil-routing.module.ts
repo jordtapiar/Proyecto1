@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { PerfilPage } from './perfil.page';
 import { Componente1Component } from 'src/app/components/componente1/componente1.component';
 import { Componente2Component } from 'src/app/components/componente2/componente2.component';
-import { Componente3Component } from 'src/app/components/componente3/componente3.component';
 
 const routes: Routes = [
   {
@@ -12,17 +11,14 @@ const routes: Routes = [
     component: PerfilPage,
     children:[
       {
-        path:'uno',
+        path:'editarPerfil',
         component: Componente1Component
       },
       {
-        path:'dos',
+        path:'horario',
         component: Componente2Component
       },
-      {
-        path:'trrres',
-        component: Componente3Component
-      }
+     
     ]
   
   }
