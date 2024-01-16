@@ -1,8 +1,10 @@
 <ion-menu side="end" contentId="main-content">
-  <ion-header>
+  <ion-header no-border>
     <ion-toolbar color="dark">
+      <ion-img></ion-img>
       <ion-title>Opciones</ion-title>
     </ion-toolbar>
+    
   </ion-header>
   <ion-content class="ion-padding">
     <ion-button color="dark" expand="block"  routerLink="/home">Menú</ion-button>
@@ -10,13 +12,27 @@
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
-  <ion-header>
+  <ion-header color="light" no-border>
     <ion-toolbar color="dark">
       <ion-title>Perfil</ion-title>
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
     </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">  </ion-content>
-</div>
+  <ion-toolbar>
+   <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="uno">
+      <ion-icon name="accessibility-sharp"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="dos">
+      <ion-icon name="alarm-outline"></ion-icon>
+    </ion-segment-button>
+   </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--En el siguiente tag se cargará el componente 
+    que corresponda al ícono en el que hice click-->
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>

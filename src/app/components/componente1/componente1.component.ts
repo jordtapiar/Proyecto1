@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -6,23 +6,21 @@ import { AlertController } from '@ionic/angular';
   templateUrl: './componente1.component.html',
   styleUrls: ['./componente1.component.scss'],
 })
-export class Componente1Component  implements OnInit {
+export class Componente1Component   {
 
-  generos:any[]=[
-    {id:1, genero:"Clásico"},
-    {id:2, genero:"Urbano"},
-    {id:3, genero:"Rock"},
-    {id:4, genero:"Jazz"}
+  jornada:any[]=[
+    {id:1, jornada:"Diurno"},
+    {id:2, jornada:"Vespertino"},
   ]
   dato: any={
-    compositor:"",
-    interprete:"",
-    lanzamiento:"",
-    genero:""
+    nombre:"",
+    apellido:"",
+    fechaDeNacimiento:"",
+    jornada:""
   };
   constructor(public alertController:AlertController) { }
 
-  ngOnInit() {}
+  
 
   limpiar(){
         //recorrer todas las entradas de Object entries y obtener su clave y valor
@@ -31,10 +29,10 @@ export class Componente1Component  implements OnInit {
         }
   }
   mostrar(){
-    if (this.dato.compositor!="" && this.dato.interprete!="") {
-      this.presentAlert("MusicDUOC","El compositor es "+this.dato.compositor+ " y el intérprete es "+this.dato.interprete)
+    if (this.dato.nombre!="" && this.dato.apellido!="") {
+      this.presentAlert("EDITADO CON EXITO","Su nombre es "+this.dato.nombre+" "+this.dato.apellido)
     } else {
-      this.presentAlert("MusicDUOC","No ingresó Compositor y/o Intérprete")
+      this.presentAlert("INGRESE DATOS SOLICITADOS","")
     }
   }
 
