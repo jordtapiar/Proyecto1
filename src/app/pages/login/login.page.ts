@@ -8,10 +8,10 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage  {
-  /**
-   * Se genera el modelo user con dos claves
-   * cada clave tiene su valor inicial
-   */
+
+  
+ 
+
   user={
     usuario:"",
     clave:""
@@ -33,7 +33,7 @@ export class LoginPage  {
       }
       this.router.navigate(['/home'],navigationextras);
     }else{
-      this.presentToast('top','Falta: '+this.field, 1000)
+      this.presentToast('top','DATOS REQUERIDOS: '+this.field, 1000)
     }
   }
   /**
@@ -65,7 +65,7 @@ export class LoginPage  {
                      duration?:number) {
     const toast = await this.toastController.create({
       message: message,
-      duration: duration?duration:2500,
+      duration: duration?duration:1500,
       position: position,
     });
 

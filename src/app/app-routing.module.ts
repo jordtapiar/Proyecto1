@@ -24,9 +24,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
+    path: 'codigo-qr',
+    loadChildren: () => import('./pages/codigo-qr/codigo-qr.module').then( m => m.CodigoQRPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/page404/page404.module').then( m => m.Page404PageModule)
   },
+  
+
   
 
 ];

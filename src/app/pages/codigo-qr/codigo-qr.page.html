@@ -1,0 +1,33 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Opciones</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding" ><ion-content class="ion-padding">
+    <ion-button color="dark" expand="block"  routerLink="/perfil">Perfil</ion-button>
+    <ion-button color="dark" expand="block">Clases</ion-button>
+  </ion-content></ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Asistencia</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> <ion-card>
+    <img alt="Silhouette of mountains" src="assets/images/codigo-qr.png" />
+    <ion-card-header>
+      <ion-card-title>Escanea el codigo QR</ion-card-title>
+      <ion-card-subtitle>para dejar la asistencia en clases</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button class="card"color="dark"id="open-loadin"routerLink="pages/home">Registrar Asistencia</ion-button>
+        <ion-loading trigger="open-loadin" message="redirigiriendo..." duration="1000"></ion-loading>
+    </ion-card-content>
+  </ion-card></ion-content>
+</div>

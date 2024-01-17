@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TaskService } from './services/task.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,18 +9,10 @@ import { TaskService } from './services/task.service';
 export class AppComponent {
   title= 'angular-http-client';
 
-  constructor(private taskService:TaskService) {}
-  getAllTasks() {
-    this.taskService.getAllTasks()
-    .subscribe(tasks => {
-      console.log(tasks);
-    });
-  }
+  public pages =[
+    
+  ]
 
-  getTasks() {
-    this.taskService.getTask('1')
-    .subscribe(task => {
-      console.log(task);
-    });
-  }
+  constructor() {}
+  
 }
