@@ -10,14 +10,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage {
 data:any;
-niveles:any[]=[
-  {id:1,nivel:"Basica Incompleta"},
-  {id:2,nivel:"Basica Completa"},
-  {id:3,nivel:"Media Incompleta"},
-  {id:4,nivel:"Media Completa"},
-  {id:5,nivel:"Superior Incompleta"},
-  {id:6,nivel:"Superior Completa"}
-]
+
 datos:any={
   nombre:"",
   apellido:"",

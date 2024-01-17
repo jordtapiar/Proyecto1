@@ -1,4 +1,4 @@
-<ion-menu side="end" contentId="main-content">
+<ion-menu side="end" contentId="principal">
   <ion-header no-border>
     <ion-toolbar color="dark">
       <ion-img></ion-img>
@@ -32,6 +32,17 @@
 </ion-header>
 
 <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let item of items; let index">
+        <ion-avatar slot="start">
+          <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+        </ion-avatar>
+        <ion-label>{{ item }}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll>
+      <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
   <!---->
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet id="principal"></ion-router-outlet>
 </ion-content>

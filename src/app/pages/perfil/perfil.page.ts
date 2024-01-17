@@ -1,17 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BdlocalService } from 'src/app/service/bdlocal.service';
 
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.page.html',
   styleUrls: ['./perfil.page.scss'],
 })
-export class PerfilPage  {
+export class PerfilPage implements OnInit {
   nombre!: string;
   numero!: number;
 data: any;
   bdlocalservice: any;
+
+  items = [];
+
+  ngOnInit() {
+    for (let i = 1; i < 51; i++) {
+      this.items.push();
+    }
+  }
+
 
   constructor(private router:Router) {}
 
