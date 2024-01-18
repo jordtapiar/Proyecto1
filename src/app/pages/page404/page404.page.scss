@@ -1,0 +1,24 @@
+.duoc{
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+    animation: duoc 10s infinite;
+}
+
+@keyframes duoc{
+    0%{
+        transform: translateY(-50px);
+    }
+    40%{
+        transform: translateY(0) rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    75%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}

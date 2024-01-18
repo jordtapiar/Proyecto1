@@ -36,7 +36,7 @@ export class Componente1Component  implements OnInit {
   }
   guardar(){
     if (this.dato.nombre!="" && this.dato.apellido!="") {
-      this.presentAlert("EDITADO CON EXITO","Su nombre es "+this.dato.nombre+" "+this.dato.apellido)
+      this.presentAlert("EDITADO CON EXITO","Su nuevo usuario es "+this.dato.nombre+" y su correo es "+this.dato.apellido)
     } else {
       this.presentAlert("NADA SE HA MODIFICADO","")
     }
