@@ -5,8 +5,9 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding" ><ion-content class="ion-padding">
+    <ion-button color="dark" expand="block"  routerLink="/home">Menú</ion-button>
     <ion-button color="dark" expand="block"  routerLink="/perfil">Perfil</ion-button>
-    <ion-button color="dark" expand="block">Clases</ion-button>
+    <ion-button color="dark" expand="block" routerLink="/pagina404">Clases</ion-button>
   </ion-content></ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -26,7 +27,7 @@
     </ion-card-header>
   
     <ion-card-content>
-      <ion-button class="card"color="dark"id="open-loadin"routerLink="pages/home">Registrar Asistencia</ion-button>
+      <ion-button class="card"color="dark"id="open-loadin"routerLink="/codigo-qr">Registrar Asistencia</ion-button>
         <ion-loading trigger="open-loadin" message="redirigiriendo..." duration="1000"></ion-loading>
     </ion-card-content>
   </ion-card></ion-content>

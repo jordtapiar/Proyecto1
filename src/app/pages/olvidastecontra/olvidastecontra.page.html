@@ -14,11 +14,16 @@
   </div>
   <div>
     <ion-item>
-      <ion-input class="input" position="floating"placeholder="Coloque su usuario"></ion-input>
-      <ion-input class="input" placeholder="Coloque su Correo"></ion-input>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user.usuario" required></ion-input>
     </ion-item>
-    <ion-button class="card"color="dark" routerLink="/login" id="present-alert" >Recuperar</ion-button>
+    <ion-item>
+      <ion-label position="floating">Correo Duoc</ion-label>
+      <ion-input type="text" [(ngModel)]="user.correo" required></ion-input>
+    </ion-item>
+    <ion-button class="card"color="dark" (click)="onReset()">Recuperar</ion-button>
     <ion-alert
+    id="present-alert" 
   trigger="present-alert"
   header="Restablecer contraseña"
   subHeader="Se envio codigo "

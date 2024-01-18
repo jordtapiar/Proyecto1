@@ -17,10 +17,6 @@
       <ion-input type="text" [(ngModel)]="dato.apellido"></ion-input>
     </ion-item>
     <ion-item class="ion-padding-horizontal">
-      <ion-label position="stacked">Fecha de nacimiento</ion-label>
-      <ion-input type="date" [(ngModel)]="dato.fechaDeNacimiento"></ion-input>
-    </ion-item>
-    <ion-item class="ion-padding-horizontal">
       <ion-label position="stacked" class="ion-padding-botom">Jornada</ion-label>
       <ion-select placeholder="Seleccione Jornada" [(ngModel)]="dato.jornada">
         <ion-select-option *ngFor="let jor of jornada" [value]="jor.id">{{jor.jornada}}</ion-select-option>
