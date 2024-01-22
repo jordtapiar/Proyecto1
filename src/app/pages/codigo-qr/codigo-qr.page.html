@@ -8,6 +8,7 @@
     <ion-button color="dark" expand="block"  routerLink="/home">Menú</ion-button>
     <ion-button color="dark" expand="block"  routerLink="/perfil">Perfil</ion-button>
     <ion-button color="dark" expand="block" routerLink="/pagina404">Clases</ion-button>
+    <ion-button color="dark" expand="block" routerLink="/login">Cerrar Sesion</ion-button>
   </ion-content></ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -27,8 +28,9 @@
     </ion-card-header>
   
     <ion-card-content>
-      <ion-button class="card"color="dark"id="open-loadin"routerLink="/codigo-qr">Registrar Asistencia</ion-button>
+      <ion-button (click)="scannerQr()" color="dark">Escanear QR</ion-button>
         <ion-loading trigger="open-loadin" message="redirigiriendo..." duration="1000"></ion-loading>
+        {{code}}
     </ion-card-content>
   </ion-card></ion-content>
 </div>
