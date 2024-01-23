@@ -62,4 +62,15 @@ export class CodigoQRPage implements OnInit {
     this.cargarAsistencias();
   }
 
+  /*scannerQr(){
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.code = barcodeData.text
+    console.log('Barcode data', barcodeData);
+    }).catch(err => {
+    console.log('Error', err);
+    })
+    }*/
+
+  
+
 }
