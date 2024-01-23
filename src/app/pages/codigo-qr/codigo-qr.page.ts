@@ -10,6 +10,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CodigoQRPage implements OnInit {
   asistencias: any;
+  barcodeScanner: any;
+  code: any;
   constructor(
     private userService: UserService,
     private storageService: StorageService
@@ -62,15 +64,16 @@ export class CodigoQRPage implements OnInit {
     this.cargarAsistencias();
   }
 
-  /*scannerQr(){
-    this.barcodeScanner.scan().then(barcodeData => {
+  scannerQr(){
+    this.barcodeScanner.scan().then((barcodeData: { text: any; }) => {
       this.code = barcodeData.text
     console.log('Barcode data', barcodeData);
-    }).catch(err => {
+    }).catch((err: any) => {
     console.log('Error', err);
     })
-    }*/
+    }
+  }
 
   
 
-}
+

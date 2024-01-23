@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { PostServiceService } from 'src/app/provider/post-service.service';
 
@@ -8,7 +8,7 @@ import { PostServiceService } from 'src/app/provider/post-service.service';
   templateUrl: './test.page.html',
   styleUrls: ['./test.page.scss'],
 })
-export class TestPage implements OnInit {
+export class TestPage  {
   
   arrayPosts:any;
 
@@ -23,7 +23,6 @@ export class TestPage implements OnInit {
       this.arrayPosts = data;
     });
   }
-  ngOnInit() {
-  }
+  
 
 }
