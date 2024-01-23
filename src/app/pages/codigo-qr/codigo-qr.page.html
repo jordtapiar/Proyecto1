@@ -4,11 +4,11 @@
       <ion-title>Opciones</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding" ><ion-content class="ion-padding">
-    <ion-button color="dark" expand="block"  routerLink="/home">Menú</ion-button>
-    <ion-button color="dark" expand="block"  routerLink="/perfil">Perfil</ion-button>
-    <ion-button color="dark" expand="block" routerLink="/pagina404">Clases</ion-button>
-  </ion-content></ion-content>
+  <ion-content class="ion-padding"><ion-content class="ion-padding">
+      <ion-button color="dark" expand="block" routerLink="/home">Menú</ion-button>
+      <ion-button color="dark" expand="block" routerLink="/perfil">Perfil</ion-button>
+      <ion-button color="dark" expand="block" routerLink="/pagina404">Clases</ion-button>
+    </ion-content></ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
@@ -20,15 +20,33 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding"> <ion-card>
-    <img alt="Silhouette of mountains" src="assets/images/codigo-qr.png" />
-    <ion-card-header>
-      <ion-card-title>Escanea el codigo QR</ion-card-title>
-      <ion-card-subtitle>para dejar la asistencia en clases</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-button class="card"color="dark"id="open-loadin"routerLink="/codigo-qr">Registrar Asistencia</ion-button>
+      <img alt="Silhouette of mountains" src="assets/images/codigo-qr.png" />
+      <ion-card-header>
+        <ion-card-title>Escanea el codigo QR</ion-card-title>
+        <ion-card-subtitle>para dejar la asistencia en clases</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-button class="card" color="dark" id="open-loading" (click)="registrarAsistencia()">
+          Registrar Asistencia
+        </ion-button>
         <ion-loading trigger="open-loadin" message="redirigiriendo..." duration="1000"></ion-loading>
-    </ion-card-content>
-  </ion-card></ion-content>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Listado de Asistencias</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let asistencia of asistencias">
+            <ion-label>
+              <h2>{{ asistencia.usuario.name }}</h2>
+              <p>Fecha: {{ asistencia.fechaHora | date:'medium' }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
 </div>
