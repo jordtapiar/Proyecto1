@@ -16,6 +16,8 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp as initializeApp_alias, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { Camera } from '@capacitor/camera';
+
 
 
 @NgModule({
