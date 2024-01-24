@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "registrapp-9cf94"
+  },
+  "targets": {
+    "registrapp-9cf94": {
+      "hosting": {
+        "app": [
+          "registrapp-9cf94"
+        ]
+      }
+    }
+  }
+}
