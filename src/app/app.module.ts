@@ -10,12 +10,14 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { BarcodeScanner } from
 '@awesome-cordova-plugins/barcode-scanner/ngx';
+import{EmailComposer} from 
+'@awesome-cordova-plugins/email-composer/ngx';
 
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(),HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },BarcodeScanner],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },BarcodeScanner, EmailComposer],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

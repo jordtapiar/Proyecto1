@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storage.service';
 import { UserService } from 'src/app/services/user.service';
+import { BarcodeScanner } from
+'@awesome-cordova-plugins/barcode-scanner/ngx';
+import{EmailComposer} from 
+'@awesome-cordova-plugins/email-composer/ngx';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { EmailComposerOptions } from '@awesome-cordova-plugins/email-composer';
+
 
 
 @Component({
@@ -10,11 +17,16 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CodigoQRPage implements OnInit {
   asistencias: any;
-  barcodeScanner: any;
   code: any;
+  hasAccount: false;
+  currentImage = null;
+  imageData = null;
   constructor(
     private userService: UserService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private barcodeScanner: BarcodeScanner,
+    private emailComposer: EmailComposer
+    
     ) { }
 
   ngOnInit() {
@@ -71,6 +83,29 @@ export class CodigoQRPage implements OnInit {
     }).catch((err: any) => {
     console.log('Error', err);
     })
+    }
+
+    async checkAccount(){
+      this.hasAccount = await this.emailComposer.hasAccount();
+    }
+
+    async captureImage(){
+      const image = await Camera.getPhoto({
+       quality: 90,
+       allowEditing: false,
+       resultType: CameraResultType.Base64,
+       source: CameraSource.Camera, 
+      });
+    }
+    async openEmail(){
+      const email: EmailComposerOptions ={
+        to: 'profesorduoc@profesduocuc.cl',
+        cc: 'leannaBret@duocuc.cl',
+        attachments: ['base64:image.jpg//${this.imageData}'],
+        subject:'Mi Asistencia',
+        body: 'Asistencia registrada y enviada',
+      };
+      await this.emailComposer.open(email);
     }
   }
 
