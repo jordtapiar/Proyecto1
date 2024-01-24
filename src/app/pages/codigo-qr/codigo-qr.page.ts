@@ -101,7 +101,7 @@ export class CodigoQRPage implements OnInit {
       const email: EmailComposerOptions ={
         to: 'profesorduoc@profesduocuc.cl',
         cc: 'leannaBret@duocuc.cl',
-        attachments: ['base64:image.jpg//${this.imageData}'],
+        attachments: ['base64:icon.png//iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6...}'],
         subject:'Mi Asistencia',
         body: 'Asistencia registrada y enviada',
       };

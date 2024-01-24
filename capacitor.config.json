@@ -1,1 +1,7 @@
-{}
+{
+
+    "appId": "com.jordano.registrApp",
+    "appname": "registrApp",
+    "webDir": "www",
+    "bundleWebRuntime": false
+}
