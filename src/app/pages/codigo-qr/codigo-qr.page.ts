@@ -98,8 +98,9 @@ export class CodigoQRPage implements OnInit {
       });
     }
     async openEmail(){
+
       const email: EmailComposerOptions ={
-        to: 'profesorduoc@profesduocuc.cl',
+        to: 'jordanotapia21@duocuc.cl',
         cc: 'leannaBret@duocuc.cl',
         attachments: ['base64:icon.png//iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6...}'],
         subject:'Mi Asistencia',
