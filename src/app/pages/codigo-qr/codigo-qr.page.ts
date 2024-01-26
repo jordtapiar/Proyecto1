@@ -100,9 +100,9 @@ export class CodigoQRPage implements OnInit {
     async openEmail(){
 
       const email: EmailComposerOptions ={
-        to: 'jordanotapia21@duocuc.cl',
-        cc: 'leannaBret@duocuc.cl',
-        attachments: ['base64:icon.png//iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6...}'],
+        to: 'nan.bernal@profesor.duoc.cl',
+        cc: 'jordanotapia21@gmail.com',
+        attachments: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Check_green_circle.svg/1200px-Check_green_circle.svg.png}'],
         subject:'Mi Asistencia',
         body: 'Asistencia registrada y enviada',
       };
